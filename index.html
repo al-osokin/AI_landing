@@ -15,32 +15,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        /* Общие стили */
-        body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FDF5E6; /* Теплый бежевый */
-            color: #5D4037; /* Глубокий коричневый */
-            line-height: 1.7;
-        }
+:root {
+  --primary-color: #E65100;
+  --accent-color: #FF6F61;
+  --text-color: #5D4037;
+  --background-color: #FDF5E6;
+  --transition-speed: 0.3s;
+  --shadow-sm: 0 10px 30px rgba(0,0,0,0.07);
+  --shadow-md: 0 15px 35px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.15);
+  --border-radius: 15px;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+/* Общие стили */
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
 
-        h1, .logo, .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        
-        h2 {
-            font-family: 'Lobster', cursive;
-            font-weight: 400; /* Каллиграфические шрифты обычно не требуют жирного начертания */
-        }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+h1, .logo, .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+    
+h2 {
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(0.1s * var(--delay, 0));
+}
         /* Навигационное меню */
         .navbar {
             background-color: rgba(255, 255, 255, 0.95);
@@ -64,6 +86,15 @@
             color: #E65100; /* Яркий, энергичный оранжевый */
         }
 
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
         .nav-links {
             list-style: none;
             margin: 0;
@@ -75,6 +106,25 @@
             margin-left: 25px;
         }
 
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 10px 0;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+        }
         .nav-links a {
             text-decoration: none;
             color: #5D4037;
@@ -192,15 +242,16 @@
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-speed) ease;
         }
         
         .service-card .icon {
             width: 250px;
             height: 250px;
             margin: 0 auto 25px;
-            color: #E65100;
+            color: var(--primary-color);
         }
         
         .service-card .icon img {
@@ -208,8 +259,12 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
+            transition: transform var(--transition-speed);
         }
-
+        
+        .service-card:hover .icon img {
+            transform: scale(1.05);
+        }
         .service-card h3 {
             color: #d35400; /* Более мягкий оранжевый для заголовков карточек */
             margin-top: 0;
@@ -279,17 +334,17 @@
 </head>
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Основная навигация">
         <div class="container">
             <div class="logo">Забота о братьях меньших</div>
-            <ul class="nav-links">
+            <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+            <ul class="nav-links" aria-label="Основная навигация">
                 <li><a href="#about">О сервисе</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </div>
     </nav>
-
     <header class="hero">
         <div class="hero-content">
             <h1>Ваш питомец в надежных руках</h1>
@@ -331,9 +386,16 @@
                 <p>Мы предлагаем разнообразные услуги передержки животных, адаптированные под потребности каждого питомца. Наши специалисты учитывают характер, возраст и особенности содержания каждого животного.</p>
                 <div class="services-grid">
                     <!-- Карточка Собаки -->
-                    <div class="service-card" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 0">
                         <div class="icon">
-                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250&fit=crop&crop=face" alt="Собака в уютном вольере" width="250" height="250" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250&fit=crop&crop=face" 
+                                 srcset="https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250 1x, 
+                                         https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&h=500 2x"
+                                 alt="Собака в уютном вольере" 
+                                 width="250" 
+                                 height="250" 
+                                 loading="lazy" 
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
                         <meta itemprop="serviceType" content="Передержка собак">
                         <h3>Передержка собак</h3>
@@ -342,9 +404,16 @@
                         <a href="#contact" class="cta-button">Заказать</a>
                     </div>
                     <!-- Карточка Кошки -->
-                    <div class="service-card" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 1">
                          <div class="icon">
-                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250&fit=crop&crop=face" alt="Кошка в уютном номере" width="250" height="250" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250&fit=crop&crop=face" 
+                                 srcset="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250 1x, 
+                                         https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&h=500 2x"
+                                 alt="Кошка в уютном номере" 
+                                 width="250" 
+                                 height="250" 
+                                 loading="lazy" 
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
                         <meta itemprop="serviceType" content="Передержка кошек">
                         <h3>Передержка кошек</h3>
@@ -353,9 +422,16 @@
                         <a href="#contact" class="cta-button">Заказать</a>
                     </div>
                     <!-- Карточка Крысы -->
-                    <div class="service-card" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 2">
                         <div class="icon">
-                            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250&fit=crop&crop=entropy" alt="Грызун в уютной клетке" width="250" height="250" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250&fit=crop&crop=entropy" 
+                                 srcset="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250 1x, 
+                                         https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=500 2x"
+                                 alt="Грызун в уютной клетке" 
+                                 width="250" 
+                                 height="250" 
+                                 loading="lazy" 
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                         </div>
                         <meta itemprop="serviceType" content="Передержка грызунов">
                         <h3>Мелкие грызуны</h3>
@@ -367,6 +443,33 @@
             </div>
         </section>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Мобильное меню
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', 
+                        navLinks.classList.contains('active'));
+                });
+                
+                // Анимация появления карточек
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll('.service-card').forEach(card => {
+                    observer.observe(card);
+                });
+            });
+        </script>
         <div class="footer-wave-divider">
             <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,106.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
