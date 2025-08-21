@@ -1,496 +1,590 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Профессиональная передержка домашних животных в Москве. Уютные условия для собак, кошек и грызунов. Забронируйте место для питомца онлайн.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Профессиональная передержка домашних животных в Москве. Уютные условия для собак, кошек и грызунов. Забронируйте место для питомца онлайн." />
     <title>Забота о братьях меньших - Передержка животных в Москве</title>
-    <meta name="keywords" content="передержка собак, кошек, грызунов, уход за животными, зоогостиница, услуги для питомцев">
-    <meta property="og:title" content="Забота о братьях меньших - Передержка животных в Москве">
-    <meta property="og:description" content="Профессиональная передержка домашних животных в Москве. Уютные условия для собак, кошек и грызунов. Забронируйте место для питомца онлайн.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pets-hotel.ru">
-    <meta property="og:image" content="https://pets-hotel.ru/images/seo-preview.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="keywords" content="передержка собак, кошек, грызунов, уход за животными, зоогостиница, услуги для питомцев" />
+    <meta property="og:title" content="Забота о братьях меньших - Передержка животных в Москве" />
+    <meta property="og:description" content="Профессиональная передержка домашних животных в Москве. Уютные условия для собак, кошек и грызунов. Забронируйте место для питомца онлайн." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pets-hotel.ru" />
+    <meta property="og:image" content="https://pets-hotel.ru/images/seo-preview.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
     <style>
-:root {
-  --primary-color: #E65100;
-  --accent-color: #FF6F61;
-  --text-color: #5D4037;
-  --background-color: #FDF5E6;
-  --transition-speed: 0.3s;
-  --shadow-sm: 0 10px 30px rgba(0,0,0,0.07);
-  --shadow-md: 0 15px 35px rgba(0,0,0,0.1);
-  --shadow-lg: 0 20px 40px rgba(0,0,0,0.15);
-  --border-radius: 15px;
-}
+      :root {
+        --primary-color: #E65100;
+        --accent-color: #FF6F61;
+        --text-color: #5D4037;
+        --background-color: #FDF5E6;
+        --transition-speed: 0.3s;
+        --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.07);
+        --shadow-md: 0 15px 35px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+        --border-radius: 15px;
+      }
 
-/* Общие стили */
-body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.7;
-}
+      /* Общие стили */
+      body {
+        font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-h1, .logo, .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-    
-h2 {
-    font-family: 'Lobster', cursive;
-    font-weight: 400;
-}
+      h1,
+      .logo,
+      .service-card h3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+      }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+      h2 {
+        font-family: 'Lobster', cursive;
+        font-weight: 400;
+      }
 
-.service-card {
-  opacity: 0;
-  animation: fadeInUp 0.6s ease forwards;
-  animation-delay: calc(0.1s * var(--delay, 0));
-}
-        /* Навигационное меню */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-            border-bottom: 1px solid #F0EAD6;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        .logo {
-            font-size: 1.6em;
-            color: #E65100; /* Яркий, энергичный оранжевый */
-        }
+      .service-card {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards;
+        animation-delay: calc(0.1s * var(--delay, 0));
+        background-color: #fff;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        padding: 40px 30px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        will-change: transform;
+      }
 
+      .service-card:hover {
+        transform: translateY(-12px) scale(1.05);
+        box-shadow: var(--shadow-lg);
+        transition: all var(--transition-speed) ease;
+      }
+
+      .service-card .icon {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 25px;
+        color: var(--primary-color);
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(230, 81, 0, 0.3);
+        transition: box-shadow 0.3s ease;
+      }
+
+      .service-card:hover .icon {
+        box-shadow: 0 0 30px rgba(230, 81, 0, 0.6);
+      }
+
+      .service-card .icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        transition: transform var(--transition-speed);
+      }
+
+      .service-card:hover .icon img {
+        transform: scale(1.1);
+      }
+
+      .service-card h3 {
+        color: #d35400;
+        margin-top: 0;
+        font-size: 2em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .price {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: var(--text-color);
+        margin: 20px 0;
+      }
+
+      .price span {
+        font-size: 0.7em;
+        font-weight: normal;
+        color: #a1887f;
+      }
+
+      /* Навигационное меню */
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-bottom: 1px solid #f0ead6;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.6em;
+        color: var(--primary-color);
+        text-shadow: 1px 1px 2px rgba(230, 81, 0, 0.5);
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        color: var(--text-color);
+        cursor: pointer;
+      }
+
+      .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-left: 25px;
+      }
+
+      @media (max-width: 768px) {
         .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            color: var(--text-color);
-            cursor: pointer;
+          display: block;
         }
-
         .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: white;
+          flex-direction: column;
+          padding: 10px 0;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
         }
+        .nav-links.active {
+          display: flex;
+        }
+      }
 
-        .nav-links li {
-            margin-left: 25px;
-        }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
 
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 10px 0;
-                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-            }
-            .nav-links.active {
-                display: flex;
-            }
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #5D4037;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
 
-        .nav-links a:hover {
-            color: #E65100;
-        }
+      /* Главный раздел */
+      .hero {
+        background: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
+        color: white;
+        padding: 120px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-        /* Главный раздел */
-        .hero {
-            background: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
-            color: white;
-            padding: 120px 20px;
-            text-align: center;
-            position: relative;
-        }
+      .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+        pointer-events: none;
+      }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
-        }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+      }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+      .hero h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        transition: transform 0.5s ease;
+      }
 
+      .hero p {
+        font-size: 1.3em;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .cta-button {
+        background: linear-gradient(45deg, #FF6F00, #E65100);
+        color: white;
+        padding: 18px 35px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+        box-shadow: 0 6px 15px rgba(230, 81, 0, 0.6);
+        will-change: transform, box-shadow;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 30px rgba(230, 81, 0, 0.8);
+      }
+
+      /* Волнистый разделитель */
+      .wave-divider {
+        position: relative;
+        background: var(--background-color);
+      }
+
+      .wave-divider svg {
+        display: block;
+      }
+
+      /* Разделы */
+      section {
+        padding: 80px 0;
+      }
+
+      section h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 3.5em;
+        color: #a1887f;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      /* О сервисе */
+      #about p {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.1em;
+        color: #795548;
+      }
+
+      /* Услуги */
+      #services {
+        background-color: #fff;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      /* Футер и контакты */
+      footer {
+        background-color: var(--text-color);
+        color: var(--background-color);
+        text-align: center;
+        padding: 30px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer h2 {
+        color: #fff;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      footer p {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+      }
+
+      .footer-wave-divider svg {
+        fill: var(--text-color);
+        width: 100%;
+        height: 100px;
+      }
+
+      /* Адаптивность */
+      @media (max-width: 768px) {
+        .logo {
+          font-size: 1.2em;
+        }
+        .nav-links {
+          display: none;
+        }
         .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+          font-size: 2.5em;
         }
-
         .hero p {
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+          font-size: 1.1em;
         }
-
-        .cta-button {
-            background: linear-gradient(45deg, #FF6F00, #E65100);
-            color: white;
-            padding: 18px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(230, 81, 0, 0.5);
-        }
-
-        /* Волнистый разделитель */
-        .wave-divider {
-            position: relative;
-            background: #FDF5E6;
-        }
-
-        .wave-divider svg {
-            display: block;
-        }
-
-        /* Разделы */
-        section {
-            padding: 80px 0;
-        }
-
         section h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 3.5em; /* Увеличим размер для каллиграфического шрифта */
-            color: #A1887F; /* Мягкий коричнево-серый */
+          font-size: 2.8em;
         }
-
-        /* О сервисе */
-        #about p {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.1em;
-            color: #795548;
-        }
-
-        /* Услуги */
-        #services {
-             background-color: #FFF;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .service-card {
-            background-color: #FFFFFF;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-            padding: 40px 30px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: var(--shadow-lg);
-            transition: all var(--transition-speed) ease;
-        }
-        
         .service-card .icon {
-            width: 250px;
-            height: 250px;
-            margin: 0 auto 25px;
-            color: var(--primary-color);
+          width: 200px;
+          height: 200px;
         }
-        
-        .service-card .icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            transition: transform var(--transition-speed);
-        }
-        
-        .service-card:hover .icon img {
-            transform: scale(1.05);
-        }
-        .service-card h3 {
-            color: #d35400; /* Более мягкий оранжевый для заголовков карточек */
-            margin-top: 0;
-            font-size: 2em;
-        }
-
-        .price {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #5D4037;
-            margin: 20px 0;
-        }
-
-        .price span {
-            font-size: 0.7em;
-            font-weight: normal;
-            color: #A1887F;
-        }
-
-        /* Футер и контакты */
-        footer {
-            background-color: #5D4037;
-            color: #FDF5E6;
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        footer h2 {
-            color: #FFF;
-            margin-bottom: 30px;
-        }
-        
-        footer p {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
-
-        .footer-wave-divider svg {
-             fill: #5D4037;
-             width: 100%;
-             height: 100px;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 1.2em; /* Уменьшаем шрифт логотипа на мобильных */
-            }
-            .nav-links {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            .hero p {
-                font-size: 1.1em;
-            }
-            section h2 {
-                font-size: 2.8em;
-            }
-            .service-card .icon {
-                width: 200px;
-                height: 200px;
-            }
-        }
+      }
     </style>
 </head>
 <body>
-
-    <nav class="navbar" aria-label="Основная навигация">
-        <div class="container">
-            <div class="logo">Забота о братьях меньших</div>
-            <button class="menu-toggle" aria-label="Открыть меню">☰</button>
-            <ul class="nav-links" aria-label="Основная навигация">
-                <li><a href="#about">О сервисе</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Ваш питомец в надежных руках</h1>
-            <p>Профессиональная передержка с любовью и вниманием к каждому хвостику.</p>
-            <a href="#services" class="cta-button">Наши Услуги</a>
-        </div>
-    </header>
-    
-    <div class="wave-divider">
-        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,160L48,170.7C96,181,192,203,288,208C384,213,480,203,576,176C672,149,768,107,864,117.3C960,128,1056,192,1152,213.3C1248,235,1344,213,1392,202.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" fill="#FDF5E6"></path>
-        </svg>
+  <nav class="navbar" aria-label="Основная навигация">
+    <div class="container">
+      <div class="logo">Забота о братьях меньших</div>
+      <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+      <ul class="nav-links" aria-label="Основная навигация">
+        <li><a href="#about">О сервисе</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
     </div>
+  </nav>
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Ваш питомец в надежных руках</h1>
+      <p>Профессиональная передержка с любовью и вниманием к каждому хвостику.</p>
+      <a href="#services" class="cta-button">Наши Услуги</a>
+    </div>
+  </header>
 
-    <main>
-        <section id="about">
-            <div class="container">
-                <h2>Наша история</h2>
-                <h3>Профессиональный подход к уходу за животными</h3>
-                <p>Мы специализируемся на передержке домашних животных с 2018 года. Наши опытные сотрудники обеспечивают индивидуальный подход к каждому питомцу. Все наши специалисты проходят сертификацию по уходу за животными.</p>
-                <h3>Наши преимущества</h3>
-                <ul>
-                    <li>Круглосуточный уход</li>
-                    <li>Просторные вольеры и номера</li>
-                    <li>Индивидуальное меню питания</li>
-                    <li>Регулярные прогулки и игры</li>
-                    <li>Безопасная территория с охраной</li>
-                </ul>
-                <p>
-                    «Забота о братьях меньших» — это не просто сервис, а дело всей нашей жизни. Мы, основатели, сами являемся страстными любителями животных и понимаем, как важно найти место, где вашему питомцу будет так же хорошо, как дома. Наша миссия — предоставить безопасную, комфортную и любящую среду для каждого нашего гостя, пока вы в отъезде.
-                </p>
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M0,160L48,170.7C96,181,192,203,288,208C384,213,480,203,576,176C672,149,768,107,864,117.3C960,128,1056,192,1152,213.3C1248,235,1344,213,1392,202.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        fill="#FDF5E6"
+      ></path>
+    </svg>
+  </div>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2>Наша история</h2>
+        <h3>Профессиональный подход к уходу за животными</h3>
+        <p>
+          Мы специализируемся на передержке домашних животных с 2018 года. Наши опытные сотрудники обеспечивают индивидуальный подход к каждому питомцу. Все наши специалисты проходят сертификацию по уходу за животными.
+        </p>
+        <h3>Наши преимущества</h3>
+        <ul>
+          <li>Круглосуточный уход</li>
+          <li>Просторные вольеры и номера</li>
+          <li>Индивидуальное меню питания</li>
+          <li>Регулярные прогулки и игры</li>
+          <li>Безопасная территория с охраной</li>
+        </ul>
+        <p>
+          «Забота о братьях меньших» — это не просто сервис, а дело всей нашей жизни. Мы, основатели, сами являемся страстными любителями животных и понимаем, как важно найти место, где вашему питомцу будет так же хорошо, как дома. Наша миссия — предоставить безопасную, комфортную и любящую среду для каждого нашего гостя, пока вы в отъезде.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Услуги и цены</h2>
+        <h3>Индивидуальный подход к каждому питомцу</h3>
+        <p>
+          Мы предлагаем разнообразные услуги передержки животных, адаптированные под потребности каждого питомца. Наши специалисты учитывают характер, возраст и особенности содержания каждого животного.
+        </p>
+        <div class="services-grid">
+          <!-- Карточка Собаки -->
+          <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 0">
+            <div class="icon">
+              <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250&fit=crop&crop=face"
+                srcset="
+                  https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250 1x,
+                  https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&h=500 2x
+                "
+                alt="Собака в уютном вольере"
+                width="250"
+                height="250"
+                loading="lazy"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%"
+              />
             </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <h2>Услуги и цены</h2>
-                <h3>Индивидуальный подход к каждому питомцу</h3>
-                <p>Мы предлагаем разнообразные услуги передержки животных, адаптированные под потребности каждого питомца. Наши специалисты учитывают характер, возраст и особенности содержания каждого животного.</p>
-                <div class="services-grid">
-                    <!-- Карточка Собаки -->
-                    <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 0">
-                        <div class="icon">
-                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250&fit=crop&crop=face" 
-                                 srcset="https://images.unsplash.com/photo-1552053831-71594a27632d?w=250&h=250 1x, 
-                                         https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&h=500 2x"
-                                 alt="Собака в уютном вольере" 
-                                 width="250" 
-                                 height="250" 
-                                 loading="lazy" 
-                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                        </div>
-                        <meta itemprop="serviceType" content="Передержка собак">
-                        <h3>Передержка собак</h3>
-                        <p>Просторные вольеры, ежедневные прогулки, игры и социализация. Мы учитываем индивидуальные особенности каждой собаки.</p>
-                        <div class="price">от 800₽ <span>/ сутки</span></div>
-                        <a href="#contact" class="cta-button">Заказать</a>
-                    </div>
-                    <!-- Карточка Кошки -->
-                    <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 1">
-                         <div class="icon">
-                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250&fit=crop&crop=face" 
-                                 srcset="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250 1x, 
-                                         https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&h=500 2x"
-                                 alt="Кошка в уютном номере" 
-                                 width="250" 
-                                 height="250" 
-                                 loading="lazy" 
-                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                        </div>
-                        <meta itemprop="serviceType" content="Передержка кошек">
-                        <h3>Передержка кошек</h3>
-                        <p>Уютные индивидуальные номера, игровые комплексы и много ласки. Ваша кошка будет чувствовать себя как дома.</p>
-                        <div class="price">от 600₽ <span>/ сутки</span></div>
-                        <a href="#contact" class="cta-button">Заказать</a>
-                    </div>
-                    <!-- Карточка Крысы -->
-                    <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 2">
-                        <div class="icon">
-                            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250&fit=crop&crop=entropy" 
-                                 srcset="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250 1x, 
-                                         https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=500 2x"
-                                 alt="Грызун в уютной клетке" 
-                                 width="250" 
-                                 height="250" 
-                                 loading="lazy" 
-                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                        </div>
-                        <meta itemprop="serviceType" content="Передержка грызунов">
-                        <h3>Мелкие грызуны</h3>
-                        <p>Специальные условия для хомячков, морских свинок и крыс. Мы обеспечим правильный уход и питание.</p>
-                        <div class="price">от 300₽ <span>/ сутки</span></div>
-                        <a href="#contact" class="cta-button">Заказать</a>
-                    </div>
-                </div>
+            <meta itemprop="serviceType" content="Передержка собак" />
+            <h3>Передержка собак</h3>
+            <p>Просторные вольеры, ежедневные прогулки, игры и социализация. Мы учитываем индивидуальные особенности каждой собаки.</p>
+            <div class="price">от 800₽ <span>/ сутки</span></div>
+            <a href="#contact" class="cta-button">Заказать</a>
+          </div>
+          <!-- Карточка Кошки -->
+          <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 1">
+            <div class="icon">
+              <img
+                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250&fit=crop&crop=face"
+                srcset="
+                  https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=250&h=250 1x,
+                  https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&h=500 2x
+                "
+                alt="Кошка в уютном номере"
+                width="250"
+                height="250"
+                loading="lazy"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%"
+              />
             </div>
-        </section>
+            <meta itemprop="serviceType" content="Передержка кошек" />
+            <h3>Передержка кошек</h3>
+            <p>Уютные индивидуальные номера, игровые комплексы и много ласки. Ваша кошка будет чувствовать себя как дома.</p>
+            <div class="price">от 600₽ <span>/ сутки</span></div>
+            <a href="#contact" class="cta-button">Заказать</a>
+          </div>
+          <!-- Карточка Крысы -->
+          <div class="service-card" itemscope itemtype="https://schema.org/Service" style="--delay: 2">
+            <div class="icon">
+              <img
+                src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250&fit=crop&crop=entropy"
+                srcset="
+                  https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=250&h=250 1x,
+                  https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=500&h=500 2x
+                "
+                alt="Грызун в уютной клетке"
+                width="250"
+                height="250"
+                loading="lazy"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%"
+              />
+            </div>
+            <meta itemprop="serviceType" content="Передержка грызунов" />
+            <h3>Мелкие грызуны</h3>
+            <p>Специальные условия для хомячков, морских свинок и крыс. Мы обеспечим правильный уход и питание.</p>
+            <div class="price">от 300₽ <span>/ сутки</span></div>
+            <a href="#contact" class="cta-button">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                // Мобильное меню
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navLinks = document.querySelector('.nav-links');
-                
-                menuToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
-                    menuToggle.setAttribute('aria-expanded', 
-                        navLinks.classList.contains('active'));
-                });
-                
-                // Анимация появления карточек
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = 1;
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                
-                document.querySelectorAll('.service-card').forEach(card => {
-                    observer.observe(card);
-                });
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Мобильное меню
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+
+        // Анимация появления карточек
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+              }
             });
-        </script>
-        <div class="footer-wave-divider">
-            <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,106.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
-        
-    </main>
+          },
+          { threshold: 0.1 }
+        );
 
-        <footer id="contact">
-            <div class="container">
-                <h2>Свяжитесь с нами</h2>
-                <h3>Онлайн-заявка и консультация</h3>
-                <p>Мы всегда рады ответить на ваши вопросы и помочь забронировать место для вашего любимца. Заполните форму ниже или позвоните нам по телефону.</p>
-            <p><strong>Адрес:</strong> г. Москва, ул. Уютная, д. 15</p>
-            <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
-            <p><strong>Email:</strong> zabota@pets-hotel.ru</p>
-            <p style="margin-top: 40px; opacity: 0.7;">© 2025 Забота о братьях меньших. Все права защищены.</p>
-        </div>
-    </footer>
+        document.querySelectorAll('.service-card').forEach((card) => {
+          observer.observe(card);
+        });
 
-    <script type="application/ld+json">
+        // Параллакс эффект для hero
+        const hero = document.getElementById('hero');
+        window.addEventListener('scroll', () => {
+          const offset = window.pageYOffset;
+          hero.style.backgroundPositionY = offset * 0.5 + 'px';
+        });
+
+        // Анимация заголовка hero при наведении
+        const heroTitle = hero.querySelector('h1');
+        heroTitle.addEventListener('mouseenter', () => {
+          heroTitle.style.transform = 'scale(1.05) translateY(-5px)';
+          heroTitle.style.transition = 'transform 0.3s ease';
+        });
+        heroTitle.addEventListener('mouseleave', () => {
+          heroTitle.style.transform = 'scale(1) translateY(0)';
+        });
+
+        // Плавное появление секций при скролле
+        const sections = document.querySelectorAll('section');
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                sectionObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        sections.forEach((section) => {
+          section.style.opacity = 0;
+          section.style.transform = 'translateY(20px)';
+          section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          sectionObserver.observe(section);
+        });
+      });
+    </script>
+
+    <div class="footer-wave-divider">
+      <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,106.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <h2>Свяжитесь с нами</h2>
+      <h3>Онлайн-заявка и консультация</h3>
+      <p>Мы всегда рады ответить на ваши вопросы и помочь забронировать место для вашего любимца. Заполните форму ниже или позвоните нам по телефону.</p>
+      <p><strong>Адрес:</strong> г. Москва, ул. Уютная, д. 15</p>
+      <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+      <p><strong>Email:</strong> zabota@pets-hotel.ru</p>
+      <p style="margin-top: 40px; opacity: 0.7;">© 2025 Забота о братьях меньших. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -509,12 +603,8 @@ h2 {
         "postalCode": "101000",
         "addressCountry": "RU"
       },
-      "sameAs": [
-        "https://vk.com/pets_hotel",
-        "https://t.me/pets_hotel"
-      ]
+      "sameAs": ["https://vk.com/pets_hotel", "https://t.me/pets_hotel"]
     }
-    </script>
-
+  </script>
 </body>
 </html>
